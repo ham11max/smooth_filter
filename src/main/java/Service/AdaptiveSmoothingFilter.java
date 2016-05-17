@@ -5,7 +5,6 @@ import Main.PlotResults;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by HAMMAX on 17.05.2016.
@@ -18,14 +17,14 @@ public class AdaptiveSmoothingFilter {
     public ArrayList filterData (ArrayList<Double> noisesData , ArrayList<Double> trendData ,String imagesPath ,String pathToOutputFile)throws  Exception{
         int maxInterval;
         mistake = new HashMap<Integer, Double>();
-        finalResult = trendData;
+        finalResult = noisesData;
         createFile(pathToOutputFile);
         if(noisesData.size()%2 ==0){
             maxInterval = noisesData.size()/2-1;
         }else{
             maxInterval = noisesData.size()/2+1;
         }
-        for(int interval = 1; interval<=maxInterval;interval++){
+        for(int interval = 1; interval<=maxInterval; interval++){
             writeToOutput("------interval = "+interval+"------");
             getSmoothElementWithInterval(interval ,noisesData ,imagesPath , trendData);
         }
@@ -34,23 +33,22 @@ public class AdaptiveSmoothingFilter {
         return finalResult;
     }
 
-
     private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData ,
                                                String imagesPath ,ArrayList<Double> trendData) throws Exception{
-        ArrayList<Double>  intervalDataSmooth = noiseData;
-        for(int i =interval;i < noiseData.size() -interval;i++) {
+        ArrayList <Double>  intervalDataSmooth = noiseData;
+        for(int i = interval;i < noiseData.size() -interval;i++) {
             double newValue = getArrangeInInterval(interval,i,noiseData);
             double sigma = Math.pow(newValue - trendData.get(i) ,2);
             if(mistake.get(i)!=null){
                 if(mistake.get(i)>sigma){
                     finalResult.set(i ,newValue);
                     mistake.put(i , sigma);
-                    writeToOutput( i , sigma);
+                    writeToOutput( i , sigma , newValue);
                 }
             }else if(mistake.get(i)==null){
                 finalResult.set(i , newValue);
                 mistake.put(i , sigma);
-                writeToOutput( i , sigma);
+                writeToOutput( i , sigma , newValue);
             }
             intervalDataSmooth.set(i ,newValue );
         }
@@ -61,6 +59,7 @@ public class AdaptiveSmoothingFilter {
         }
 
     }
+
     private double getArrangeInInterval(int interval, int current,ArrayList<Double> noiseData){
         double result = 0.0;
         for(int  i = current-interval; i<=current+interval;i++){
@@ -69,17 +68,13 @@ public class AdaptiveSmoothingFilter {
         return result;
     }
 
-
-
     public static ArrayList<Double> getTrendFromFile(String pathToFile){
         ArrayList<Double> trend = new ArrayList<Double>();
         File file = new File(pathToFile);
         BufferedReader reader = null;
-
         try {
             reader = new BufferedReader(new FileReader(file));
             String text = null;
-
             while ((text = reader.readLine()) != null) {
                 trend.add(Double.parseDouble(text.replace("," , ".")));
             }
@@ -95,10 +90,8 @@ public class AdaptiveSmoothingFilter {
             } catch (IOException e) {
             }
         }
-
         return trend;
     }
-
 
     private void createFile(String pathToFile){
         try{
@@ -110,17 +103,17 @@ public class AdaptiveSmoothingFilter {
         }
     }
 
-    private  void writeToOutput( int interval , double accuracy) throws IOException{
-        bufferedWriter.write("value : "+interval +"  | accuracy: "+accuracy);
+    private  void writeToOutput( int interval , double accuracy , double value) throws IOException{
+        bufferedWriter.write("value: "+ value+"  |   index : "+interval +"  | accuracy: "+accuracy);
         bufferedWriter.newLine();
     }
+
     private void closeWriter() throws IOException{
         bufferedWriter.close();
     }
+
     private  void writeToOutput( String value) throws IOException{
         bufferedWriter.write(value);
         bufferedWriter.newLine();
     }
-
-
 }
