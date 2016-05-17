@@ -1,9 +1,12 @@
 package Service;
 
+import Main.PlotResults;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.FileHandler;
 
 /**
  * Created by HAMMAX on 17.05.2016.
@@ -11,6 +14,40 @@ import java.util.List;
 public class AdaptiveSmoothingFilter {
     private static final int LENGTH = 1000;
     private BufferedWriter bufferedWriter = null;
+
+    public ArrayList<Double> filterData (ArrayList<Double> noisesData , ArrayList<Double> trendData ,String imagesPath)throws  IOException{
+        int maxInterval;
+        ArrayList<Double> filterData = new ArrayList<Double>(LENGTH);
+        if(noisesData.size()%2 ==0){
+            maxInterval = noisesData.size()/2-1;
+        }else{
+            maxInterval = noisesData.size()/2+1;
+        }
+        for(int interval = 0; interval<=maxInterval;interval++){
+            getSmoothElementWithInterval(interval ,noisesData ,imagesPath);
+        }
+    return filterData;
+    }
+
+
+    private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData , String imagesPath) throws IOException{
+        ArrayList<Double> intervalDataSmooth = new ArrayList<Double>();
+        for(int i =interval;i < noiseData.size() -interval;i++) {
+            intervalDataSmooth.set(i , getArrangeInInterval(interval,i,noiseData));
+            String fullPath = PlotResults.getNameOFImageFile(interval,imagesPath);
+            PlotResults.plotDataAndSaveToImage(fullPath,intervalDataSmooth,interval);
+        }
+
+    }
+    private double getArrangeInInterval(int interval, int current,ArrayList<Double> noiseData){
+        double result = 0.0;
+        for(int  i = current-interval; i<=current+interval;i++){
+            result = result+noiseData.get(i)/(2*interval+1);
+        }
+        return result;
+    }
+
+
 
 
     public static ArrayList<Double> getTrendFromFile(String pathToFile){
@@ -38,32 +75,27 @@ public class AdaptiveSmoothingFilter {
             }
         }
 
-    return trend;
+        return trend;
     }
 
-    public ArrayList<Double> filterData (ArrayList<Double> noisesData){
-        ArrayList<Double> filterData = new ArrayList<Double>(LENGTH);
-        filterData.set()
 
+    private void createFile(String pathToFile){
+        try{
+            File file = new File(pathToFile);
+            FileWriter fileWriter = new FileWriter(file);
+            bufferedWriter = new BufferedWriter(fileWriter);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     private  void writeToOutput( String pathToOutput, int interval , double accuracy) throws IOException{
-        try {
-            File file = new File(pathToOutput);
-            FileWriter fileWriter = new FileWriter(file);
-            bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write("interval: "+interval +"  | accuracy: "+accuracy);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }finally {
-            bufferedWriter.close();
-        }
-
+        bufferedWriter.write("interval: "+interval +"  | accuracy: "+accuracy);
+        bufferedWriter.newLine();
     }
-
-    private double getSmoothElementWith()
-
-
+    private void closeWriter() throws IOException{
+        bufferedWriter.close();
+    }
 
 
 }
