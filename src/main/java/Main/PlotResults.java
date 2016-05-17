@@ -15,12 +15,12 @@ import java.util.ArrayList;
  */
 public class PlotResults {
 
-    public static void plotDataAndSaveToImage(String imagePath , ArrayList<Double> data , int interval) throws IOException{
+    public static void plotDataAndSaveToImage(String imagePath, String header , ArrayList<Double> data , int interval) throws IOException{
         DefaultCategoryDataset categoryDataSet = new DefaultCategoryDataset();
         for (Integer i = 0; i<data.size(); i++){
             categoryDataSet.addValue( data.get(i) , "interval" , i);
         }
-        JFreeChart lineChartObject = ChartFactory.createLineChart("Noise Data with interval "+interval,"Time", "Data", categoryDataSet, PlotOrientation.VERTICAL, true,true,false);
+        JFreeChart lineChartObject = ChartFactory.createLineChart(header,"Time", "Data", categoryDataSet, PlotOrientation.VERTICAL, true,true,false);
         int width = 640;
         int height = 480;
         File lineChart = new File( imagePath );

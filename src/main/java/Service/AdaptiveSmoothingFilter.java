@@ -54,8 +54,9 @@ public class AdaptiveSmoothingFilter {
             }
             intervalDataSmooth.set(i ,newValue );
         }
-        String fullPath = PlotResults.getNameOFImageFile(interval,imagesPath);
-        PlotResults.plotDataAndSaveToImage(fullPath,intervalDataSmooth,interval);
+        String header = "Noise Data with interval "+interval;
+        //String fullPath = PlotResults.getNameOFImageFile(interval,imagesPath);
+        //PlotResults.plotDataAndSaveToImage(fullPath,header ,intervalDataSmooth,interval);
 
     }
     private double getArrangeInInterval(int interval, int current,ArrayList<Double> noiseData){
@@ -78,7 +79,7 @@ public class AdaptiveSmoothingFilter {
             String text = null;
 
             while ((text = reader.readLine()) != null) {
-                trend.add(Double.parseDouble(text));
+                trend.add(Double.parseDouble(text.replace("," , ".")));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
