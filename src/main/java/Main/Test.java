@@ -1,5 +1,6 @@
 package Main;
 
+import Service.AdaptiveSmoothingFilter;
 import Service.NoiseGenerator;
 
 /**
@@ -7,11 +8,12 @@ import Service.NoiseGenerator;
  */
 public class Test {
     public static void main(String[] args) {
+        String path = "C:\\FilesFor filter\\inputFile.txt";
+        AdaptiveSmoothingFilter.getTrendFromFile(path);
         NoiseGenerator noiseGenerator = new NoiseGenerator();
-        double [] mass = noiseGenerator.getNoiseByMaxAmplitude(30 , 0.2);
-        for(int i = 0; i< 1000;i++){
+        noiseGenerator.getNoiseByMaxAmplitude(5 ,0.2);
+        System.out.println( noiseGenerator.addNoiseToTrend(noiseGenerator.getNoiseByMaxAmplitude(5 ,0.2) ,AdaptiveSmoothingFilter.getTrendFromFile(path) ));
 
-            System.out.println(mass[i]);
-        }
+
     }
 }

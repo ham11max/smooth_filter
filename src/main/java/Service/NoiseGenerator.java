@@ -1,6 +1,8 @@
 package Service;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -10,10 +12,10 @@ public class NoiseGenerator {
     private final static int LENGTH = 1000;
 
 
-    public double[] getNoiseByMaxAmplitude(double maxValue ,  double percentages ){
-        double [] noise = new double [LENGTH];
+    public ArrayList<Double> getNoiseByMaxAmplitude(double maxValue , double percentages ){
+        ArrayList<Double> noise = new ArrayList<Double>(LENGTH);
         for(int i = 0; i<LENGTH;i++) {
-            noise[i] = generateRandomValue(-maxValue*percentages , maxValue*percentages);
+            noise.add(generateRandomValue(-maxValue*percentages , maxValue*percentages));
         }
         return noise;
     }
@@ -24,10 +26,10 @@ public class NoiseGenerator {
         return  randomValue;
     }
 
-    public double[] addNoiseToTrend(double [] noise  , double [] trend ){
-        for(int i = 0;i<LENGTH;i++) {
-            trend[i] = noise[i]+trend[i];
-        }
+    public ArrayList<Double> addNoiseToTrend(ArrayList<Double> noise  , ArrayList<Double> trend ){
+            for(int i =0;i<LENGTH;i++){
+                trend.set(i ,trend.get(i)+noise.get(i));
+            }
         return  trend;
     }
 }
