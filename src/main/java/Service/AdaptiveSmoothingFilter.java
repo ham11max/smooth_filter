@@ -4,10 +4,8 @@ import Main.PlotResults;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.logging.FileHandler;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by HAMMAX on 17.05.2016.
@@ -15,24 +13,46 @@ import java.util.logging.FileHandler;
 public class AdaptiveSmoothingFilter {
     private static final int LENGTH = 100;
     private BufferedWriter bufferedWriter = null;
+    private ArrayList<Double> finalResult;
+    private HashMap<Integer , Double> mistake;
 
-    public void filterData (ArrayList<Double> noisesData , ArrayList<Double> trendData ,String imagesPath)throws  Exception{
+    public ArrayList filterData (ArrayList<Double> noisesData , ArrayList<Double> trendData ,String imagesPath ,String pathToOutputFile)throws  Exception{
         int maxInterval;
+        mistake = new HashMap<Integer, Double>();
+        finalResult = trendData;
+        createFile(pathToOutputFile);
         if(noisesData.size()%2 ==0){
             maxInterval = noisesData.size()/2-1;
         }else{
             maxInterval = noisesData.size()/2+1;
         }
         for(int interval = 1; interval<=maxInterval;interval++){
-            getSmoothElementWithInterval(interval ,noisesData ,imagesPath);
+            getSmoothElementWithInterval(interval ,noisesData ,imagesPath , trendData);
         }
+        closeWriter();
+        System.out.println(mistake);
+        return finalResult;
     }
 
 
-    private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData , String imagesPath) throws Exception{
+    private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData ,
+                                               String imagesPath ,ArrayList<Double> trendData) throws Exception{
         ArrayList<Double>  intervalDataSmooth = noiseData;
         for(int i =interval;i < noiseData.size() -interval;i++) {
-            intervalDataSmooth.set(i , getArrangeInInterval(interval,i,noiseData));
+            double newValue = getArrangeInInterval(interval,i,noiseData);
+            double sigma = Math.pow(newValue - trendData.get(i) ,2);
+            if(mistake.get(i)!=null){
+                if(mistake.get(i)>sigma){
+                    finalResult.set(i ,newValue);
+                    mistake.put(i , sigma);
+                    writeToOutput( i , sigma);
+                }
+            }else if(mistake.get(i)==null){
+                finalResult.set(i , newValue);
+                mistake.put(i , sigma);
+                writeToOutput( i , sigma);
+            }
+            intervalDataSmooth.set(i ,newValue );
         }
         String fullPath = PlotResults.getNameOFImageFile(interval,imagesPath);
         PlotResults.plotDataAndSaveToImage(fullPath,intervalDataSmooth,interval);
@@ -87,8 +107,8 @@ public class AdaptiveSmoothingFilter {
         }
     }
 
-    private  void writeToOutput( String pathToOutput, int interval , double accuracy) throws IOException{
-        bufferedWriter.write("interval: "+interval +"  | accuracy: "+accuracy);
+    private  void writeToOutput( int interval , double accuracy) throws IOException{
+        bufferedWriter.write("value : "+interval +"  | accuracy: "+accuracy);
         bufferedWriter.newLine();
     }
     private void closeWriter() throws IOException{
