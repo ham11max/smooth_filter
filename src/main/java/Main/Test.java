@@ -13,7 +13,12 @@ public class Test {
         String path = "C:\\Users\\HAMMAX\\Desktop\\Диплом\\Output\\inputFile.txt";
         String pathToImages = "C:\\Users\\HAMMAX\\Desktop\\Диплом\\Output\\images";
         NoiseGenerator noiseGenerator = new NoiseGenerator();
+        ArrayList <Double> trend =  AdaptiveSmoothingFilter.getTrendFromFile(path);
         ArrayList<Double> noiseTrend = noiseGenerator.addNoiseToTrend(noiseGenerator.getNoiseByMaxAmplitude(5, 0.05), AdaptiveSmoothingFilter.getTrendFromFile(path));
-
+        AdaptiveSmoothingFilter adaptiveSmoothingFilter = new AdaptiveSmoothingFilter();
+        System.out.println(trend);
+        System.out.println(trend.size());
+        System.out.println(noiseTrend);
+        adaptiveSmoothingFilter.filterData(noiseTrend,trend,pathToImages);
     }
 }

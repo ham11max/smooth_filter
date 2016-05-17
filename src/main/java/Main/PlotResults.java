@@ -27,6 +27,6 @@ public class PlotResults {
         ChartUtilities.saveChartAsJPEG(lineChart ,lineChartObject, width ,height);
     }
     public static String getNameOFImageFile(int interval , String imagePath){
-        return imagePath+File.separator+"Filter with interval "+ 2*interval+1+".jpg";
+        return imagePath+File.separator+"Filter with interval "+ interval+".jpg";
     }
 }

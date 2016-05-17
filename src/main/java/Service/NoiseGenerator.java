@@ -9,7 +9,7 @@ import java.util.Random;
  * Created by HAMMAX on 17.05.2016.
  */
 public class NoiseGenerator {
-    private final static int LENGTH = 1000;
+    private final static int LENGTH = 100;
 
 
     public ArrayList<Double> getNoiseByMaxAmplitude(double maxValue , double percentages ){
