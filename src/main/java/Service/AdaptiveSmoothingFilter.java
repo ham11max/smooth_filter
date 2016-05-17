@@ -11,7 +11,6 @@ import java.util.Map;
  * Created by HAMMAX on 17.05.2016.
  */
 public class AdaptiveSmoothingFilter {
-    private static final int LENGTH = 100;
     private BufferedWriter bufferedWriter = null;
     private ArrayList<Double> finalResult;
     private HashMap<Integer , Double> mistake;
@@ -27,6 +26,7 @@ public class AdaptiveSmoothingFilter {
             maxInterval = noisesData.size()/2+1;
         }
         for(int interval = 1; interval<=maxInterval;interval++){
+            writeToOutput("------interval = "+interval+"------");
             getSmoothElementWithInterval(interval ,noisesData ,imagesPath , trendData);
         }
         closeWriter();
@@ -54,9 +54,11 @@ public class AdaptiveSmoothingFilter {
             }
             intervalDataSmooth.set(i ,newValue );
         }
-        String header = "Noise Data with interval "+interval;
-        //String fullPath = PlotResults.getNameOFImageFile(interval,imagesPath);
-        //PlotResults.plotDataAndSaveToImage(fullPath,header ,intervalDataSmooth,interval);
+        if(interval<10) {
+            String header = "Noise Data with interval " + interval;
+            String fullPath = PlotResults.getNameOFImageFile(interval, imagesPath);
+            PlotResults.plotDataAndSaveToImage(fullPath, header, intervalDataSmooth, interval);
+        }
 
     }
     private double getArrangeInInterval(int interval, int current,ArrayList<Double> noiseData){
@@ -114,6 +116,10 @@ public class AdaptiveSmoothingFilter {
     }
     private void closeWriter() throws IOException{
         bufferedWriter.close();
+    }
+    private  void writeToOutput( String value) throws IOException{
+        bufferedWriter.write(value);
+        bufferedWriter.newLine();
     }
 
 

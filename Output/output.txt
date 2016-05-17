@@ -1,136 +1,311 @@
-value : 1  | accuracy: 37.785473585194396
-value : 2  | accuracy: 102.26185790007328
-value : 3  | accuracy: 103.54513560083633
-value : 4  | accuracy: 84.89181847817494
-value : 5  | accuracy: 37.92941031988114
-value : 6  | accuracy: 1.0695727886155186
-value : 7  | accuracy: 45.012868114011376
-value : 8  | accuracy: 65.7100776157467
-value : 9  | accuracy: 79.6313416304765
-value : 10  | accuracy: 48.1019001676848
-value : 11  | accuracy: 3.6431090878947763
-value : 12  | accuracy: 40824.68186013532
-value : 13  | accuracy: 119925.8688385029
-value : 14  | accuracy: 6357.485600038898
-value : 15  | accuracy: 324.78197002316955
-value : 16  | accuracy: 0.5078214379046974
-value : 17  | accuracy: 14.205711628767416
-value : 18  | accuracy: 0.041129684845319966
-value : 19  | accuracy: 20.60969018926468
-value : 20  | accuracy: 66.42171218861073
-value : 21  | accuracy: 104.39265361214902
-value : 22  | accuracy: 84.50423011412921
-value : 23  | accuracy: 46.901075536099114
-value : 24  | accuracy: 2.585758992552553
-value : 25  | accuracy: 12.876759491417364
-value : 26  | accuracy: 81.88743201274765
-value : 27  | accuracy: 161.5035970479979
-value : 28  | accuracy: 168.0741869049729
-value : 29  | accuracy: 123.16817574678241
-value : 30  | accuracy: 27.890662004729094
-value : 31  | accuracy: 0.020456192150510408
-value : 32  | accuracy: 9.955416763649032
-value : 33  | accuracy: 57.99597341739931
-value : 34  | accuracy: 107.74281613530188
-value : 35  | accuracy: 113.22633674860016
-value : 36  | accuracy: 44.735608795865204
-value : 37  | accuracy: 5.64202211713634E-4
-value : 38  | accuracy: 22.67158348086222
-value : 39  | accuracy: 64.99983624048842
-value : 40  | accuracy: 95.42811696922449
-value : 41  | accuracy: 77.64751104976571
-value : 42  | accuracy: 21.522737873538958
-value : 43  | accuracy: 0.8371435624734331
-value : 44  | accuracy: 32.74546139480567
-value : 45  | accuracy: 87.52369320286986
-value : 46  | accuracy: 131.45776734917567
-value : 47  | accuracy: 131.53842181849657
-value : 48  | accuracy: 84.55868248762025
-value : 49  | accuracy: 17.056744342930532
-value : 50  | accuracy: 8.866930906041594
-value : 51  | accuracy: 80.44215698837843
-value : 52  | accuracy: 158.22455645238463
-value : 53  | accuracy: 187.1575389249335
-value : 54  | accuracy: 119.37958841060598
-value : 55  | accuracy: 41.72756566848638
-value : 56  | accuracy: 4.123637511054109
-value : 57  | accuracy: 7.7156110648582725
-value : 58  | accuracy: 60.0244228190554
-value : 59  | accuracy: 132.18361277450137
-value : 60  | accuracy: 136.76006796952964
-value : 61  | accuracy: 56.961254540180605
-value : 62  | accuracy: 2.8385291464172835
-value : 63  | accuracy: 20.383367891957903
-value : 64  | accuracy: 100.58908935015018
-value : 65  | accuracy: 119.3580373156079
-value : 66  | accuracy: 107.85826091570692
-value : 67  | accuracy: 63.946473920712734
-value : 68  | accuracy: 1.3338246647239262
-value : 69  | accuracy: 23.750442598277075
-value : 70  | accuracy: 64.22523673691009
-value : 71  | accuracy: 126.79883651207369
-value : 72  | accuracy: 120.9788791725178
-value : 73  | accuracy: 58.590796794360564
-value : 74  | accuracy: 15.16832319864595
-value : 75  | accuracy: 4.926977013331419
-value : 76  | accuracy: 75.52648394255124
-value : 77  | accuracy: 174.13440156923508
-value : 78  | accuracy: 152.30626054853542
-value : 79  | accuracy: 60.88005478223919
-value : 80  | accuracy: 16.020401033795476
-value : 81  | accuracy: 0.05520787608641598
-value : 82  | accuracy: 13.262958482166137
-value : 83  | accuracy: 60.63445596533206
-value : 84  | accuracy: 152.51007964365866
-value : 85  | accuracy: 167.63683357507907
-value : 86  | accuracy: 85.21288398456264
-value : 87  | accuracy: 4.202730024677598
-value : 88  | accuracy: 27.011497980471777
-value : 89  | accuracy: 106.18304178177775
-value : 90  | accuracy: 139.09983848311316
-value : 91  | accuracy: 111.31822090605439
-value : 92  | accuracy: 54.145761649679066
-value : 93  | accuracy: 7.288747226749071
-value : 94  | accuracy: 2.169088112953371
-value : 95  | accuracy: 26.836379504194948
-value : 96  | accuracy: 78.0873925632491
-value : 97  | accuracy: 157.52713949062343
-value : 98  | accuracy: 125.8406960081763
-value : 12  | accuracy: 3444.4915721682332
-value : 13  | accuracy: 24088.91591732827
-value : 14  | accuracy: 985.6945853098603
-value : 15  | accuracy: 43.358793884833545
-value : 25  | accuracy: 9.481211768976342
-value : 44  | accuracy: 18.284031449162335
-value : 50  | accuracy: 1.0015206584868723
-value : 69  | accuracy: 3.7235599695537056
-value : 75  | accuracy: 0.047331729923951904
-value : 88  | accuracy: 18.759153931647948
-value : 94  | accuracy: 1.0534086627666104
-value : 12  | accuracy: 3090.793836854358
-value : 13  | accuracy: 4533.521487688595
-value : 56  | accuracy: 3.3911272927386626
-value : 12  | accuracy: 1213.9625967754455
-value : 13  | accuracy: 1620.0713188132581
-value : 12  | accuracy: 555.7512838105661
-value : 13  | accuracy: 570.451413954715
-value : 87  | accuracy: 1.102981324150023
-value : 12  | accuracy: 142.06457382241456
-value : 13  | accuracy: 88.1511422480609
-value : 43  | accuracy: 0.6025580388990397
-value : 12  | accuracy: 16.314044551901024
-value : 13  | accuracy: 5.320900629964906
-value : 43  | accuracy: 0.20153815827312346
-value : 12  | accuracy: 7.414795231407545
-value : 13  | accuracy: 1.531936610370517
-value : 43  | accuracy: 0.10455865635481473
-value : 12  | accuracy: 0.7320843158568283
-value : 30  | accuracy: 19.405396167553874
-value : 13  | accuracy: 0.019503381032295944
-value : 30  | accuracy: 3.0659429474345576
-value : 74  | accuracy: 12.417140959710437
-value : 74  | accuracy: 0.3143210044175307
-value : 74  | accuracy: 0.11232702833881424
-value : 74  | accuracy: 0.03484515953142358
-value : 74  | accuracy: 0.009187363025457834
-value : 74  | accuracy: 0.0029929441459754726
+------interval = 1------
+value : 1  | accuracy: 0.034442650935666466
+value : 2  | accuracy: 0.003215264991024223
+value : 3  | accuracy: 0.027987180489567377
+value : 4  | accuracy: 0.1420019261962069
+value : 5  | accuracy: 0.010598173195571315
+value : 6  | accuracy: 0.03995012019189955
+value : 7  | accuracy: 0.002762449959170824
+value : 8  | accuracy: 0.009784951123549582
+value : 9  | accuracy: 0.032985228790436284
+value : 10  | accuracy: 0.05508393800667217
+value : 11  | accuracy: 0.06885104188505412
+value : 12  | accuracy: 0.05527500162760196
+value : 13  | accuracy: 0.15173123545851766
+value : 14  | accuracy: 0.061393354632696434
+value : 15  | accuracy: 0.005897575906026556
+value : 16  | accuracy: 2.630874314567721E-6
+value : 17  | accuracy: 0.02282603949622346
+value : 18  | accuracy: 0.009012880418578733
+value : 19  | accuracy: 0.005853655009120334
+value : 20  | accuracy: 0.0014956354567471012
+value : 21  | accuracy: 0.038492341341876256
+value : 22  | accuracy: 0.12474682620672034
+value : 23  | accuracy: 0.15449699644252285
+value : 24  | accuracy: 0.1655343437538486
+value : 25  | accuracy: 0.012212647975985527
+value : 26  | accuracy: 0.03252274857638977
+value : 27  | accuracy: 0.08372314271975176
+value : 28  | accuracy: 0.13866440749133283
+value : 29  | accuracy: 0.14255099829647633
+value : 30  | accuracy: 0.021723974492547593
+value : 31  | accuracy: 0.03550456810544945
+value : 32  | accuracy: 2.80054082949489
+value : 33  | accuracy: 0.7633863270560348
+value : 34  | accuracy: 0.05518945125208237
+value : 35  | accuracy: 8.482805404779135E-4
+value : 36  | accuracy: 0.0015610187160563665
+value : 37  | accuracy: 9.691803670803874E-5
+value : 38  | accuracy: 0.01667981622178324
+value : 39  | accuracy: 0.028546776075560252
+value : 40  | accuracy: 6.752188352767529E-4
+value : 41  | accuracy: 0.02700221879394057
+value : 42  | accuracy: 0.005161032814228029
+value : 43  | accuracy: 8.744053977616859E-4
+value : 44  | accuracy: 0.004471214384380557
+value : 45  | accuracy: 0.030814576250562435
+value : 46  | accuracy: 0.13357116306253675
+value : 47  | accuracy: 0.18390760857440833
+value : 48  | accuracy: 0.1752419147868856
+value : 49  | accuracy: 0.02374577505320146
+value : 50  | accuracy: 0.047211382365904594
+value : 51  | accuracy: 0.03360225062940489
+value : 52  | accuracy: 0.004518789617341355
+value : 53  | accuracy: 0.039131096870933496
+value : 54  | accuracy: 0.00976783207583967
+value : 55  | accuracy: 3.7171902039781364E-5
+value : 56  | accuracy: 0.04254355203510863
+value : 57  | accuracy: 0.11426388477432198
+value : 58  | accuracy: 0.1732144493306269
+value : 59  | accuracy: 0.10632870349292657
+value : 60  | accuracy: 0.07473898867518747
+value : 61  | accuracy: 0.031239944518130523
+value : 62  | accuracy: 0.005196424780128078
+value : 63  | accuracy: 0.004083978063409204
+value : 64  | accuracy: 0.11432322342534623
+value : 65  | accuracy: 2.0445576354210306
+value : 66  | accuracy: 1.2020046930453698
+value : 67  | accuracy: 0.03852230246060798
+value : 68  | accuracy: 8.886369511066924E-6
+value : 69  | accuracy: 0.012304364829563501
+value : 70  | accuracy: 0.017788282371273223
+value : 71  | accuracy: 0.030440465749963317
+value : 72  | accuracy: 0.07253938404906418
+value : 73  | accuracy: 4.8643314106780645E-4
+value : 74  | accuracy: 0.02635862180012227
+value : 75  | accuracy: 5.200030533525832E-4
+value : 76  | accuracy: 0.04605993768579531
+value : 77  | accuracy: 0.13803255091872865
+value : 78  | accuracy: 0.013825840113817534
+value : 79  | accuracy: 0.012033467422846536
+value : 80  | accuracy: 0.027686004939595693
+value : 81  | accuracy: 0.021169545288447708
+value : 82  | accuracy: 0.024074300309879733
+value : 83  | accuracy: 0.01661939171363837
+value : 84  | accuracy: 0.005014762143183244
+value : 85  | accuracy: 0.009107636784574533
+value : 86  | accuracy: 0.003396273071190381
+value : 87  | accuracy: 0.029766891334323663
+value : 88  | accuracy: 0.026893161520668122
+value : 89  | accuracy: 0.020973807197152458
+value : 90  | accuracy: 0.03795074793542257
+value : 91  | accuracy: 0.04515783169807352
+value : 92  | accuracy: 0.02779009104072407
+value : 93  | accuracy: 0.031645918042753074
+value : 94  | accuracy: 0.001258399642614558
+value : 95  | accuracy: 0.03577626935087607
+value : 96  | accuracy: 0.006413403220338761
+value : 97  | accuracy: 0.003964755519208965
+value : 98  | accuracy: 0.002692222436994922
+------interval = 2------
+value : 2  | accuracy: 7.339730494120054E-4
+value : 3  | accuracy: 0.00654787180047249
+value : 4  | accuracy: 0.09578903002081145
+value : 5  | accuracy: 0.010425056029448203
+value : 6  | accuracy: 0.020517742653656423
+value : 7  | accuracy: 6.359682491737231E-4
+value : 8  | accuracy: 9.616811079198338E-4
+value : 9  | accuracy: 1.8786371127003216E-5
+value : 10  | accuracy: 7.191363723935287E-4
+value : 11  | accuracy: 6.329471698195899E-5
+value : 12  | accuracy: 0.0010137893413423938
+value : 13  | accuracy: 0.020286293934172826
+value : 14  | accuracy: 0.006356752538726296
+value : 15  | accuracy: 6.888682042255444E-5
+value : 17  | accuracy: 0.017047464149969875
+value : 18  | accuracy: 0.008943095850988354
+value : 21  | accuracy: 3.108160372257643E-4
+value : 22  | accuracy: 0.00342793971514855
+value : 23  | accuracy: 0.011942253154169271
+value : 24  | accuracy: 0.050072053081366245
+value : 25  | accuracy: 0.007916082794166742
+value : 26  | accuracy: 0.0027934630793264707
+value : 27  | accuracy: 0.0036364073211390246
+value : 28  | accuracy: 0.014787663147477205
+value : 29  | accuracy: 0.0459205483276883
+value : 32  | accuracy: 0.5909017440256656
+value : 33  | accuracy: 0.3819752065445753
+value : 38  | accuracy: 0.0157303668355923
+value : 41  | accuracy: 0.01017381932775736
+value : 42  | accuracy: 2.8537126783751923E-4
+value : 43  | accuracy: 4.7131974048185535E-4
+value : 45  | accuracy: 0.001109724601753152
+value : 46  | accuracy: 0.00418119257498442
+value : 47  | accuracy: 0.01602741974938902
+value : 48  | accuracy: 0.051493102588153566
+value : 49  | accuracy: 0.010942596866929917
+value : 50  | accuracy: 0.029569142441794424
+value : 51  | accuracy: 0.008925097937629722
+value : 52  | accuracy: 0.0010487469959460868
+value : 53  | accuracy: 0.010407470676357973
+value : 54  | accuracy: 2.2990910849348744E-9
+value : 56  | accuracy: 0.0012198405106094747
+value : 57  | accuracy: 0.001972866874012907
+value : 58  | accuracy: 0.011257078732731771
+value : 59  | accuracy: 0.002509754523753396
+value : 60  | accuracy: 0.0026755464037173733
+value : 61  | accuracy: 0.0016187871812296088
+value : 62  | accuracy: 0.0044141506229797975
+value : 65  | accuracy: 0.728927523994395
+value : 66  | accuracy: 0.24664122940510438
+value : 71  | accuracy: 1.8492903003573294E-7
+value : 72  | accuracy: 0.03134739715203612
+value : 76  | accuracy: 0.001569895902016846
+value : 77  | accuracy: 0.05472590425366299
+value : 78  | accuracy: 0.007528550341296918
+value : 79  | accuracy: 0.003488265551931542
+value : 80  | accuracy: 0.017182299154630664
+value : 82  | accuracy: 0.013797697308281034
+value : 83  | accuracy: 0.016062623443966133
+value : 84  | accuracy: 0.0032713073724585646
+value : 86  | accuracy: 5.25132638786117E-4
+value : 87  | accuracy: 0.0030322380388364276
+value : 88  | accuracy: 5.53887710330564E-4
+value : 89  | accuracy: 2.9543685968955874E-4
+value : 90  | accuracy: 3.807382429189087E-4
+value : 91  | accuracy: 0.0011304340920495156
+value : 92  | accuracy: 3.9417090823508545E-4
+value : 93  | accuracy: 0.011642951944430949
+value : 95  | accuracy: 0.02599024891651495
+value : 96  | accuracy: 0.003602405550379647
+------interval = 3------
+value : 4  | accuracy: 0.014187941491317298
+value : 5  | accuracy: 0.0038055469133383246
+value : 6  | accuracy: 0.0011640768822316397
+value : 8  | accuracy: 3.207964350034748E-4
+value : 9  | accuracy: 6.545498226290358E-6
+value : 10  | accuracy: 2.851837584500923E-5
+value : 13  | accuracy: 0.008457244830506649
+value : 14  | accuracy: 0.0033543971853814045
+value : 15  | accuracy: 1.138572512438278E-5
+value : 17  | accuracy: 9.886933756673E-4
+value : 18  | accuracy: 9.297970133851089E-4
+value : 24  | accuracy: 0.019002151102308875
+value : 25  | accuracy: 0.003256740803540854
+value : 26  | accuracy: 0.001308443693354219
+value : 28  | accuracy: 0.007189957905006807
+value : 32  | accuracy: 0.04153102507710504
+value : 33  | accuracy: 0.06263308479246936
+value : 41  | accuracy: 0.0012252869215001693
+value : 48  | accuracy: 0.012196989299739822
+value : 49  | accuracy: 4.523605319307866E-4
+value : 50  | accuracy: 0.0010942688044673493
+value : 51  | accuracy: 0.0023035485160013943
+value : 53  | accuracy: 2.0208436867408694E-5
+value : 56  | accuracy: 4.0216291943452674E-4
+value : 58  | accuracy: 0.006960779620066411
+value : 60  | accuracy: 0.0018673792516926866
+value : 65  | accuracy: 0.07957158943259986
+value : 66  | accuracy: 0.043605107942198344
+value : 72  | accuracy: 0.027468187923259012
+value : 77  | accuracy: 0.0034679617965429612
+value : 78  | accuracy: 2.0859656037702088E-4
+value : 80  | accuracy: 0.003529517677460269
+value : 82  | accuracy: 3.98179615758623E-4
+value : 83  | accuracy: 4.030474373033572E-4
+value : 84  | accuracy: 0.002712262526098052
+value : 86  | accuracy: 6.556513959221668E-5
+value : 87  | accuracy: 2.6568578613361505E-5
+value : 88  | accuracy: 7.78273035376324E-5
+value : 93  | accuracy: 3.834995535176837E-4
+value : 94  | accuracy: 1.6045603740178892E-4
+value : 95  | accuracy: 9.411535580823987E-4
+value : 96  | accuracy: 3.235652163660887E-5
+------interval = 4------
+value : 4  | accuracy: 0.006853380594701018
+value : 5  | accuracy: 0.0027997812853494744
+value : 6  | accuracy: 9.466257056274197E-4
+value : 8  | accuracy: 1.6543113823632005E-4
+value : 13  | accuracy: 0.0019023976081402468
+value : 14  | accuracy: 6.328768692326904E-4
+value : 17  | accuracy: 8.082733439597236E-4
+value : 18  | accuracy: 4.4518876267585477E-4
+value : 24  | accuracy: 0.006835001426337181
+value : 32  | accuracy: 0.003550355385533723
+value : 33  | accuracy: 0.01760006572217372
+value : 44  | accuracy: 0.003955382106522582
+value : 48  | accuracy: 0.005660390801960455
+value : 50  | accuracy: 5.463378588302681E-4
+value : 51  | accuracy: 4.4136645435354383E-4
+value : 52  | accuracy: 7.367037777712941E-5
+value : 58  | accuracy: 1.876756691319367E-4
+value : 65  | accuracy: 0.007507028716766951
+value : 66  | accuracy: 0.017226736909538187
+value : 76  | accuracy: 7.744017559471708E-4
+value : 80  | accuracy: 0.002844982502771123
+value : 84  | accuracy: 0.001689936457667341
+value : 87  | accuracy: 1.0991966687021686E-5
+value : 93  | accuracy: 1.477257165537622E-4
+value : 94  | accuracy: 1.0678173641520006E-5
+value : 95  | accuracy: 1.0472823499669062E-4
+------interval = 5------
+value : 5  | accuracy: 0.002041182151195624
+value : 6  | accuracy: 2.094057872955284E-4
+value : 13  | accuracy: 0.0014278271183869842
+value : 17  | accuracy: 4.617942956721293E-5
+value : 32  | accuracy: 1.4650201445448184E-4
+value : 33  | accuracy: 0.009395900687767769
+value : 65  | accuracy: 9.655919910757355E-4
+value : 66  | accuracy: 0.0064012291291130575
+value : 87  | accuracy: 9.32644265609564E-7
+value : 93  | accuracy: 1.1847729514066565E-4
+------interval = 6------
+value : 6  | accuracy: 1.338369000488425E-4
+value : 13  | accuracy: 4.3478213986334984E-4
+value : 19  | accuracy: 6.260992409628302E-4
+value : 32  | accuracy: 2.196066715392699E-5
+value : 33  | accuracy: 0.003551646014558842
+value : 65  | accuracy: 2.3768010831889483E-4
+value : 66  | accuracy: 0.0027271113253384475
+value : 93  | accuracy: 8.960602599198321E-6
+------interval = 7------
+value : 14  | accuracy: 3.799581182324193E-5
+value : 33  | accuracy: 0.001457970773812309
+value : 66  | accuracy: 6.205930747455224E-4
+------interval = 8------
+value : 33  | accuracy: 0.0011391539357771226
+value : 66  | accuracy: 1.336861896079728E-6
+value : 90  | accuracy: 4.336680194689069E-6
+------interval = 9------
+value : 11  | accuracy: 2.8928787245669713E-5
+value : 32  | accuracy: 4.70641687455504E-6
+------interval = 10------
+------interval = 11------
+------interval = 12------
+------interval = 13------
+------interval = 14------
+------interval = 15------
+------interval = 16------
+------interval = 17------
+------interval = 18------
+------interval = 19------
+------interval = 20------
+------interval = 21------
+------interval = 22------
+------interval = 23------
+------interval = 24------
+------interval = 25------
+------interval = 26------
+------interval = 27------
+------interval = 28------
+------interval = 29------
+------interval = 30------
+------interval = 31------
+------interval = 32------
+------interval = 33------
+------interval = 34------
+------interval = 35------
+------interval = 36------
+------interval = 37------
+------interval = 38------
+------interval = 39------
+------interval = 40------
+------interval = 41------
+------interval = 42------
+------interval = 43------
+------interval = 44------
+------interval = 45------
+------interval = 46------
+------interval = 47------
+------interval = 48------
+------interval = 49------

@@ -5,7 +5,6 @@ import Service.NoiseGenerator;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by HAMMAX on 17.05.2016.
@@ -22,7 +21,7 @@ public class Test {
 
         PlotResults.plotDataAndSaveToImage(pathToImages+File.separator+"TrendData.jpg","Trend" , trend, 1);
 
-        ArrayList<Double> noiseTrend = noiseGenerator.addNoiseToTrend(noiseGenerator.getNoiseByMaxAmplitude(40, 0.11), AdaptiveSmoothingFilter.getTrendFromFile(pathToInput));
+        ArrayList<Double> noiseTrend = noiseGenerator.addNoiseToTrend(noiseGenerator.getNoiseByMaxAmplitude(5, 0.11), AdaptiveSmoothingFilter.getTrendFromFile(pathToInput));
         AdaptiveSmoothingFilter adaptiveSmoothingFilter = new AdaptiveSmoothingFilter();
 
         PlotResults.plotDataAndSaveToImage(pathToImages+File.separator+"NoisesData.jpg", "Trend+Noise" , noiseTrend, 1);
