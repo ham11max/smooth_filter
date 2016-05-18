@@ -35,11 +35,11 @@ public class AdaptiveSmoothingFilter {
 
     private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData ,
                                                String imagesPath ,ArrayList<Double> trendData) throws Exception{
-        ArrayList <Double>  intervalDataSmooth = noiseData;
+      //  ArrayList <Double>  intervalDataSmooth = noiseData;
         for(int i = interval;i < noiseData.size() -interval;i++) {
-            double newValue = getArrangeInInterval(interval,i,noiseData);
+            double newValue = getArrangeInInterval(interval,i,finalResult);
             double sigma = Math.pow(newValue - trendData.get(i) ,2);
-            if(mistake.get(i)!=null){
+            if(mistake.get(i)!= null){
                 if(mistake.get(i)>sigma){
                     finalResult.set(i ,newValue);
                     mistake.put(i , sigma);
@@ -50,12 +50,13 @@ public class AdaptiveSmoothingFilter {
                 mistake.put(i , sigma);
                 writeToOutput( i , sigma , newValue);
             }
-            intervalDataSmooth.set(i ,newValue );
+          //  intervalDataSmooth.set(i ,newValue );
         }
-        if(interval<10) {
+        if(interval ==49 ) System.out.println(finalResult);;
+        if(interval==49) {
             String header = "Noise Data with interval " + interval;
             String fullPath = PlotResults.getNameOFImageFile(interval, imagesPath);
-            PlotResults.plotDataAndSaveToImage(fullPath, header, intervalDataSmooth, interval);
+            PlotResults.plotDataAndSaveToImage(fullPath, header, finalResult, interval);
         }
 
     }
