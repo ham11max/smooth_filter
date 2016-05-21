@@ -38,22 +38,27 @@ public class AdaptiveSmoothingFilter {
       //  ArrayList <Double>  intervalDataSmooth = noiseData;
         for(int i = interval;i < noiseData.size() -interval;i++) {
             double newValue = getArrangeInInterval(interval,i,finalResult);
-            double sigma = Math.pow(newValue - trendData.get(i) ,2);
-            if(mistake.get(i)!= null){
-                if(mistake.get(i)>sigma){
-                    finalResult.set(i ,newValue);
-                    mistake.put(i , sigma);
-                    writeToOutput( i , sigma , newValue);
-                }
-            }else if(mistake.get(i)==null){
+            if (interval ==1){
                 finalResult.set(i , newValue);
-                mistake.put(i , sigma);
-                writeToOutput( i , sigma , newValue);
+                writeToOutput( i , 0.0 , newValue);
+
+            }else {
+                double sigma = Math.pow(newValue - finalResult.get(i), 2);
+                if (mistake.get(i) != null) {
+                    if (mistake.get(i) > sigma) {
+                        finalResult.set(i, newValue);
+                        mistake.put(i, sigma);
+                        writeToOutput(i, sigma, newValue);
+                    }
+                } else if (mistake.get(i) == null) {
+                    finalResult.set(i, newValue);
+                    mistake.put(i, sigma);
+                    writeToOutput(i, sigma, newValue);
+                }
             }
           //  intervalDataSmooth.set(i ,newValue );
         }
-        if(interval ==49 ) System.out.println(finalResult);;
-        if(interval==49) {
+        if(interval<10) {
             String header = "Noise Data with interval " + interval;
             String fullPath = PlotResults.getNameOFImageFile(interval, imagesPath);
             PlotResults.plotDataAndSaveToImage(fullPath, header, finalResult, interval);
