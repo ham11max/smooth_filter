@@ -1,8 +1,6 @@
 package Service;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -26,7 +24,7 @@ public class NoiseGenerator {
         return  randomValue;
     }
 
-    public ArrayList<Double> addNoiseToTrend(ArrayList<Double> noise  , ArrayList<Double> trend ){
+    public static ArrayList<Double> addNoiseToTrend(ArrayList<Double> noise  , ArrayList<Double> trend ){
             for(int i =0;i<LENGTH;i++){
                 trend.set(i ,trend.get(i)+noise.get(i));
             }

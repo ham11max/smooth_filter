@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 /**
  * Created by HAMMAX on 17.05.2016.
  */
@@ -14,7 +15,7 @@ public class AdaptiveSmoothingFilter {
     private ArrayList<Double> finalResult;
     private HashMap<Integer , Double> mistake;
 
-    public ArrayList filterData (ArrayList<Double> noisesData , ArrayList<Double> trendData ,String imagesPath ,String pathToOutputFile)throws  Exception{
+    public ArrayList filterData (ArrayList<Double> noisesData,String imagesPath ,String pathToOutputFile)throws  Exception{
         int maxInterval;
         mistake = new HashMap<Integer, Double>();
         finalResult = noisesData;
@@ -26,23 +27,21 @@ public class AdaptiveSmoothingFilter {
         }
         for(int interval = 1; interval<=maxInterval; interval++){
             writeToOutput("------interval = "+interval+"------");
-            getSmoothElementWithInterval(interval ,noisesData ,imagesPath , trendData);
+            getSmoothElementWithInterval(interval ,noisesData ,imagesPath);
         }
         closeWriter();
-        System.out.println(mistake);
         return finalResult;
     }
 
     private void getSmoothElementWithInterval( int interval , ArrayList<Double> noiseData ,
-                                               String imagesPath ,ArrayList<Double> trendData) throws Exception{
-      //  ArrayList <Double>  intervalDataSmooth = noiseData;
+                                               String imagesPath ) throws Exception{
         for(int i = interval;i < noiseData.size() -interval;i++) {
             double newValue = getArrangeInInterval(interval,i,finalResult);
             if (interval ==1){
                 finalResult.set(i , newValue);
                 writeToOutput( i , 0.0 , newValue);
 
-            }else {
+            }else if(interval>1){
                 double sigma = Math.pow(newValue - finalResult.get(i), 2);
                 if (mistake.get(i) != null) {
                     if (mistake.get(i) > sigma) {
@@ -56,7 +55,6 @@ public class AdaptiveSmoothingFilter {
                     writeToOutput(i, sigma, newValue);
                 }
             }
-          //  intervalDataSmooth.set(i ,newValue );
         }
         if(interval<10) {
             String header = "Noise Data with interval " + interval;
@@ -122,4 +120,14 @@ public class AdaptiveSmoothingFilter {
         bufferedWriter.write(value);
         bufferedWriter.newLine();
     }
+
+    public static double compareResults(ArrayList<Double> trend, ArrayList<Double> result){
+        double determinationValue  = 0.0;
+        for(int i = 1; i<trend.size()-1;i++){
+            determinationValue = determinationValue + Math.pow(trend.get(i) - result.get(i),2)/(trend.size()-2);
+        }
+        determinationValue = Math.sqrt(determinationValue);
+        return determinationValue;
+    }
 }
+

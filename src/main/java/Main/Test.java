@@ -11,7 +11,6 @@ import java.util.ArrayList;
  */
 public class Test {
     public static void main(String[] args)throws Exception {
-
         String pathToInput = "Output\\inputFile.txt";
         String pathToOutput = "Output\\output.txt";
         String pathToImages = "Output\\images";
@@ -26,7 +25,9 @@ public class Test {
 
         PlotResults.plotDataAndSaveToImage(pathToImages+File.separator+"NoisesData.jpg", "Trend+Noise" , noiseTrend, 1);
 
-        ArrayList<Double> res =adaptiveSmoothingFilter.filterData(noiseTrend,trend,pathToImages ,pathToOutput);
+        ArrayList<Double> res =adaptiveSmoothingFilter.filterData(noiseTrend,pathToImages ,pathToOutput);
         PlotResults.plotDataAndSaveToImage(pathToImages+ File.separator+"FinalResult.jpg","Final RESULT", res, 1);
+
+        System.out.println(AdaptiveSmoothingFilter.compareResults(trend , res));
     }
 }
